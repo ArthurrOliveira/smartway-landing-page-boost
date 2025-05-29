@@ -15,10 +15,13 @@ const WhatsAppButton = () => {
   return (
     <button
       onClick={handleWhatsAppClick}
-      className="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-lg transition-all duration-300 transform hover:scale-110 z-50"
+      className="fixed bottom-8 right-8 bg-green-500 hover:bg-green-600 text-white p-5 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-110 z-50 group"
       title="Fale conosco pelo WhatsApp"
     >
-      <MessageCircle size={24} />
+      <MessageCircle size={28} className="group-hover:animate-pulse" />
+      <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+        <span className="text-white text-xs font-bold animate-pulse">!</span>
+      </div>
     </button>
   );
 };
