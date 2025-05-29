@@ -1,89 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SmartWay Idioms - A Maneira Inteligente de Aprender Inglês</title>
-    <meta name="description" content="Há mais de 10 anos oferecendo cursos de inglês personalizados com professores nativos. Aulas individuais e em grupo.">
-    <link rel="icon" type="image/png" href="/lovable-uploads/70d36be2-1da9-459a-87fa-149edb5dbe8c.png">
+    <title>SmartWay Idioms - Escola de Inglês Online</title>
+    <meta name="description" content="Aprenda inglês online com a SmartWay Idioms. Método inovador, professores qualificados e flexibilidade total para você dominar o idioma.">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
+
 <body>
+    <!-- WhatsApp Button -->
+    <div id="whatsapp-btn" class="whatsapp-btn">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+
     <!-- Header -->
-    <header id="header">
+    <header id="header" class="header">
         <div class="container">
-            <div class="header-content">
-                <div class="logo">
-                    <img src="/lovable-uploads/70d36be2-1da9-459a-87fa-149edb5dbe8c.png" alt="SmartWay Idioms">
-                </div>
-
-                <!-- Desktop Navigation -->
-                <nav class="desktop-nav">
-                    <a href="#sobre" class="nav-link">Sobre Nós</a>
-                    <a href="#metodologia" class="nav-link">Metodologia</a>
-                    <a href="#servicos" class="nav-link">Serviços</a>
-                    <button onclick="scrollToSection('contato')" class="cta-button">Fale Conosco</button>
-                </nav>
-
-                <!-- Social Media Links -->
-                <div class="social-links">
-                    <a href="https://www.facebook.com/smartwayidioms?locale=pt_BR" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/smartwayidioms/" target="_blank" rel="noopener noreferrer" class="social-link">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
-                    <i class="fas fa-bars"></i>
-                </button>
+            <div class="nav-brand">
+                <img src="/public/lovable-uploads/70d36be2-1da9-459a-87fa-149edb5dbe8c.png" alt="SmartWay Idioms" class="logo">
+                <span class="brand-text">SmartWay Idioms</span>
             </div>
-
-            <!-- Mobile Menu -->
-            <div id="mobile-menu" class="mobile-menu">
-                <a href="#sobre" class="mobile-nav-link" onclick="closeMobileMenu()">Sobre Nós</a>
-                <a href="#metodologia" class="mobile-nav-link" onclick="closeMobileMenu()">Metodologia</a>
-                <a href="#servicos" class="mobile-nav-link" onclick="closeMobileMenu()">Serviços</a>
-                <a href="#contato" class="mobile-nav-link" onclick="closeMobileMenu()">Fale Conosco</a>
-                <div class="mobile-social">
-                    <a href="https://www.facebook.com/smartwayidioms?locale=pt_BR" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-facebook"></i>
-                    </a>
-                    <a href="https://www.instagram.com/smartwayidioms/" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                </div>
-            </div>
+            
+            <nav class="nav-menu">
+                <a href="#home" class="nav-link">Início</a>
+                <a href="#about" class="nav-link">Sobre</a>
+                <a href="#methodology" class="nav-link">Metodologia</a>
+                <a href="#services" class="nav-link">Serviços</a>
+                <a href="#contact" class="nav-link">Contato</a>
+            </nav>
+            
+            <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="mobile-menu">
+            <a href="#home" class="mobile-nav-link" onclick="closeMobileMenu()">Início</a>
+            <a href="#about" class="mobile-nav-link" onclick="closeMobileMenu()">Sobre</a>
+            <a href="#methodology" class="mobile-nav-link" onclick="closeMobileMenu()">Metodologia</a>
+            <a href="#services" class="mobile-nav-link" onclick="closeMobileMenu()">Serviços</a>
+            <a href="#contact" class="mobile-nav-link" onclick="closeMobileMenu()">Contato</a>
         </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="hero">
+    <section id="home" class="hero">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1>
-                        Aprenda Inglês com
-                        <span class="highlight">Professores Nativos</span>
+                    <h1 class="hero-title">
+                        Domine o <span class="highlight">Inglês</span> com Nossa Metodologia Inovadora
                     </h1>
                     <p class="hero-description">
-                        A Maneira Inteligente de Aprender - Cursos personalizados há mais de 10 anos no mercado
+                        Aprenda inglês de forma eficiente e personalizada com nossos cursos online. 
+                        Professores qualificados, material exclusivo e flexibilidade total para você 
+                        alcançar a fluência.
                     </p>
                     <div class="hero-buttons">
-                        <button onclick="scrollToSection('contato')" class="primary-btn">Comece Agora</button>
-                        <button onclick="scrollToSection('sobre')" class="secondary-btn">Saiba Mais</button>
+                        <button class="btn btn-primary" onclick="scrollToSection('contact')">
+                            Comece Agora
+                        </button>
+                        <button class="btn btn-secondary" onclick="scrollToSection('about')">
+                            Saiba Mais
+                        </button>
                     </div>
                 </div>
                 <div class="hero-image">
                     <div class="image-placeholder">
-                        <p>[Espaço para imagem principal<br/>
-                        - Professores ensinando<br/>
-                        - Alunos em aula<br/>
-                        - Ambiente de aprendizado]</p>
+                        <i class="fas fa-graduation-cap"></i>
                     </div>
                 </div>
             </div>
@@ -91,272 +84,382 @@
     </section>
 
     <!-- About Section -->
-    <section id="sobre">
+    <section id="about" class="about">
         <div class="container">
-            <div class="about-content">
-                <div class="about-text">
-                    <span class="section-label">Sobre Nós</span>
-                    <h2>Transformando vidas através do inglês</h2>
-                    <p>
-                        Há mais de 10 anos no mercado, a SmartWay Idioms é especializada no ensino de língua inglesa, 
-                        oferecendo aulas com professores nativos. Seus cursos são personalizados, focados nos objetivos 
-                        a serem alcançados pelo aluno.
+            <div class="section-header">
+                <h2 class="section-title">Por que escolher a SmartWay?</h2>
+                <p class="section-description">
+                    Somos uma escola de inglês online comprometida com a excelência no ensino
+                </p>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3 class="feature-title">Professores Qualificados</h3>
+                    <p class="feature-description">
+                        Nossos professores são nativos e certificados, com vasta experiência no ensino online.
                     </p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <div class="stat-number">10+</div>
-                            <div class="stat-label">Anos de Experiência</div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-number">100%</div>
-                            <div class="stat-label">Professores Nativos</div>
-                        </div>
-                    </div>
                 </div>
-                <div class="about-image">
-                    <div class="image-placeholder">
-                        <p>[Espaço para imagem<br/>
-                        - Professores da SmartWay<br/>
-                        - Ambiente da escola<br/>
-                        - Equipe trabalhando]</p>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-clock"></i>
                     </div>
-                    <div class="floating-card">
-                        <div class="status-indicator"></div>
-                        <span>Aulas online e presenciais</span>
+                    <h3 class="feature-title">Flexibilidade Total</h3>
+                    <p class="feature-description">
+                        Estude no seu ritmo, quando e onde quiser. Aulas disponíveis 24/7.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-chart-line"></i>
                     </div>
+                    <h3 class="feature-title">Método Comprovado</h3>
+                    <p class="feature-description">
+                        Nossa metodologia exclusiva garante resultados rápidos e duradouros.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3 class="feature-title">Tecnologia Avançada</h3>
+                    <p class="feature-description">
+                        Plataforma moderna e intuitiva, acessível em qualquer dispositivo.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Methodology Section -->
-    <section id="metodologia">
+    <section id="methodology" class="methodology">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Nossa Metodologia</span>
-                <h2>Desenvolvemos suas habilidades de comunicação</h2>
-                <p>
-                    Desenvolver as habilidades de comunicação em inglês com foco nas necessidades individuais 
-                    dos alunos (viagens, trabalho, certificações, conversação etc.)
+                <h2 class="section-title">Nossa Metodologia</h2>
+                <p class="section-description">
+                    Um método exclusivo desenvolvido para acelerar seu aprendizado
                 </p>
             </div>
-
-            <div class="features-grid">
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-bullseye"></i>
-                    </div>
-                    <h3>Foco Individual</h3>
-                    <p>Atendimento personalizado para suas necessidades específicas</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-users"></i>
-                    </div>
-                    <h3>Professores Nativos</h3>
-                    <p>Aprenda com quem nasceu falando inglês</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-globe"></i>
-                    </div>
-                    <h3>Objetivos Diversos</h3>
-                    <p>Viagens, trabalho, certificações ou conversação</p>
-                </div>
-                <div class="feature-card">
-                    <div class="feature-icon">
-                        <i class="fas fa-award"></i>
-                    </div>
-                    <h3>Método Comprovado</h3>
-                    <p>Mais de 10 anos desenvolvendo comunicação eficaz</p>
-                </div>
-            </div>
-
+            
             <div class="methodology-content">
-                <div class="methodology-image">
-                    <div class="image-placeholder">
-                        <p>[Espaço para imagem<br/>
-                        - Aula em andamento<br/>
-                        - Método de ensino<br/>
-                        - Interação professor-aluno]</p>
+                <div class="methodology-steps">
+                    <div class="step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Avaliação Inicial</h3>
+                            <p class="step-description">
+                                Identificamos seu nível atual e objetivos específicos para criar um plano personalizado.
+                            </p>
+                        </div>
                     </div>
-                </div>
-                <div class="methodology-text">
-                    <h3>Abordagem Personalizada</h3>
-                    <p>
-                        Cada aluno é único, e nossa metodologia reconhece isso. Desenvolvemos planos de estudo 
-                        específicos para cada objetivo, seja para uma viagem internacional, promoção no trabalho 
-                        ou certificação internacional.
-                    </p>
-                    <p>
-                        Com professores nativos experientes, garantimos que você aprenda não apenas a gramática, 
-                        mas também a cultura e nuances da língua inglesa.
-                    </p>
-                    <button onclick="scrollToSection('contato')" class="primary-btn">Conheça Nossa Metodologia</button>
+                    
+                    <div class="step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Aprendizado Ativo</h3>
+                            <p class="step-description">
+                                Aulas interativas com foco na conversação e aplicação prática do idioma.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Prática Constante</h3>
+                            <p class="step-description">
+                                Exercícios diários e conversação com nativos para fixar o aprendizado.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <h3 class="step-title">Certificação</h3>
+                            <p class="step-description">
+                                Acompanhamento contínuo do progresso e certificação reconhecida internacionalmente.
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Services Section -->
-    <section id="servicos">
+    <section id="services" class="services">
         <div class="container">
             <div class="section-header">
-                <span class="section-label">Nossos Serviços</span>
-                <h2>Modalidades que se adaptam a você</h2>
-                <p>
-                    Oferecemos modalidades de ensino que se adaptam ao seu estilo de aprendizado e disponibilidade
+                <h2 class="section-title">Nossos Cursos</h2>
+                <p class="section-description">
+                    Escolha o plano ideal para seu perfil e objetivos
                 </p>
             </div>
-
+            
             <div class="services-grid">
-                <div class="service-card popular">
-                    <div class="popular-badge">Mais Popular</div>
-                    <div class="service-icon">
-                        <i class="fas fa-user"></i>
-                    </div>
-                    <h3>Aulas Individuais</h3>
-                    <p>Atenção 100% personalizada com professor nativo</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i>Horários flexíveis</li>
-                        <li><i class="fas fa-check"></i>Conteúdo personalizado</li>
-                        <li><i class="fas fa-check"></i>Evolução mais rápida</li>
-                        <li><i class="fas fa-check"></i>Foco total em suas necessidades</li>
-                    </ul>
-                    <button onclick="scrollToSection('contato')" class="service-btn primary">Saiba Mais</button>
-                </div>
-
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-users"></i>
+                    <div class="service-header">
+                        <h3 class="service-title">Básico</h3>
+                        <div class="service-price">
+                            <span class="price">R$ 97</span>
+                            <span class="period">/mês</span>
+                        </div>
                     </div>
-                    <h3>Aulas em Grupo</h3>
-                    <p>Aprenda junto com outros alunos em ambiente colaborativo</p>
-                    <ul class="service-features">
-                        <li><i class="fas fa-check"></i>Interação social</li>
-                        <li><i class="fas fa-check"></i>Custos reduzidos</li>
-                        <li><i class="fas fa-check"></i>Prática em grupo</li>
-                        <li><i class="fas fa-check"></i>Networking</li>
-                    </ul>
-                    <button onclick="scrollToSection('contato')" class="service-btn secondary">Saiba Mais</button>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>2 aulas por semana</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Material didático incluído</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Suporte por chat</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Acesso à plataforma</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Escolher Plano</button>
                 </div>
-            </div>
-
-            <div class="services-image">
-                <div class="image-placeholder">
-                    <p>[Espaço para imagem<br/>
-                    - Aulas individuais e em grupo<br/>
-                    - Diferentes modalidades<br/>
-                    - Ambiente de aprendizado]</p>
+                
+                <div class="service-card featured">
+                    <div class="service-badge">Mais Popular</div>
+                    <div class="service-header">
+                        <h3 class="service-title">Intermediário</h3>
+                        <div class="service-price">
+                            <span class="price">R$ 147</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>4 aulas por semana</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Conversação com nativos</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Material premium</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Suporte prioritário</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Certificado de conclusão</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary">Escolher Plano</button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-header">
+                        <h3 class="service-title">Avançado</h3>
+                        <div class="service-price">
+                            <span class="price">R$ 197</span>
+                            <span class="period">/mês</span>
+                        </div>
+                    </div>
+                    <div class="service-features">
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Aulas ilimitadas</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Aulas 1 on 1</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Preparação para exames</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Suporte 24/7</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check"></i>
+                            <span>Mentoria personalizada</span>
+                        </div>
+                    </div>
+                    <button class="btn btn-outline">Escolher Plano</button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contato">
+    <section id="contact" class="contact">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Entre em Contato</h2>
+                <p class="section-description">
+                    Tire suas dúvidas e comece sua jornada rumo à fluência
+                </p>
+            </div>
+            
             <div class="contact-content">
                 <div class="contact-info">
-                    <span class="section-label">Fale Conosco</span>
-                    <h2>Pronto para começar sua jornada?</h2>
-                    <p>
-                        Entre em contato conosco e descubra como podemos ajudá-lo a alcançar seus objetivos no inglês. 
-                        Nossa equipe está pronta para criar um plano personalizado para você.
-                    </p>
-                    <div class="contact-methods">
-                        <div class="contact-method">
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
-                            <span>contato@smartwayidioms.com</span>
                         </div>
-                        <div class="contact-method">
+                        <div class="contact-details">
+                            <h3>Email</h3>
+                            <p>contato@smartwayidioms.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
                             <i class="fas fa-phone"></i>
-                            <span>(11) 99999-9999</span>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Telefone</h3>
+                            <p>(11) 99999-9999</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Horário</h3>
+                            <p>Segunda a Sexta: 8h às 18h</p>
                         </div>
                     </div>
                 </div>
-
+                
                 <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" required>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Nome *</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Telefone</label>
+                        <label for="phone">Telefone *</label>
                         <input type="tel" id="phone" name="phone" required>
                     </div>
+                    
                     <div class="form-group">
-                        <label for="message">Mensagem (opcional)</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Conte-nos sobre seus objetivos com o inglês..."></textarea>
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" placeholder="Conte-nos sobre seus objetivos com o inglês..."></textarea>
                     </div>
-                    <button type="submit" class="primary-btn full-width">Enviar Mensagem</button>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">
+                        Enviar Mensagem
+                    </button>
                 </form>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer id="footer">
+    <footer class="footer">
         <div class="container">
             <div class="footer-content">
-                <div class="footer-info">
-                    <img src="/lovable-uploads/70d36be2-1da9-459a-87fa-149edb5dbe8c.png" alt="SmartWay Idioms" class="footer-logo">
-                    <p>
-                        A Maneira Inteligente de Aprender Inglês. Há mais de 10 anos oferecendo 
-                        cursos personalizados com professores nativos.
+                <div class="footer-section">
+                    <div class="footer-brand">
+                        <img src="/public/lovable-uploads/70d36be2-1da9-459a-87fa-149edb5dbe8c.png" alt="SmartWay Idioms" class="footer-logo">
+                        <span class="footer-brand-text">SmartWay Idioms</span>
+                    </div>
+                    <p class="footer-description">
+                        Transformando vidas através do ensino de inglês online com qualidade e inovação.
                     </p>
-                    <div class="footer-social">
-                        <a href="https://www.facebook.com/smartwayidioms?locale=pt_BR" target="_blank" rel="noopener noreferrer">
+                    <div class="social-links">
+                        <a href="#" class="social-link">
                             <i class="fab fa-facebook"></i>
                         </a>
-                        <a href="https://www.instagram.com/smartwayidioms/" target="_blank" rel="noopener noreferrer">
+                        <a href="#" class="social-link">
                             <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-youtube"></i>
                         </a>
                     </div>
                 </div>
-
-                <div class="footer-links">
-                    <h3>Links Rápidos</h3>
-                    <ul>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#metodologia">Metodologia</a></li>
-                        <li><a href="#servicos">Serviços</a></li>
-                        <li><a href="#contato">Fale Conosco</a></li>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#methodology">Metodologia</a></li>
+                        <li><a href="#services">Cursos</a></li>
+                        <li><a href="#contact">Contato</a></li>
                     </ul>
                 </div>
-
-                <div class="footer-contact">
-                    <h3>Contato</h3>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <span>contato@smartwayidioms.com</span>
-                    </div>
-                    <div class="footer-contact-item">
-                        <i class="fas fa-phone"></i>
-                        <span>(11) 99999-9999</span>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Cursos</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Inglês Básico</a></li>
+                        <li><a href="#">Inglês Intermediário</a></li>
+                        <li><a href="#">Inglês Avançado</a></li>
+                        <li><a href="#">Inglês para Negócios</a></li>
+                        <li><a href="#">Preparação para Exames</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3 class="footer-title">Contato</h3>
+                    <div class="footer-contact">
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            contato@smartwayidioms.com
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            (11) 99999-9999
+                        </p>
+                        <p>
+                            <i class="fas fa-clock"></i>
+                            Segunda a Sexta: 8h às 18h
+                        </p>
                     </div>
                 </div>
             </div>
-
+            
             <div class="footer-bottom">
-                <p>© 2024 SmartWay Idioms. Todos os direitos reservados.</p>
-                <button onclick="scrollToTop()" class="scroll-top-btn">
-                    <i class="fas fa-arrow-up"></i>
-                </button>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2024 SmartWay Idioms. Todos os direitos reservados.</p>
+                    <div class="footer-bottom-links">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                    </div>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Button -->
-    <div id="whatsapp-btn" class="whatsapp-button">
-        <i class="fab fa-whatsapp"></i>
-        <div class="notification-badge">!</div>
-    </div>
-
+    <!-- Scripts -->
+    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
     <script src="script.js"></script>
+    <script type="module" src="/src/main.tsx"></script>
 </body>
 </html>
