@@ -14,44 +14,41 @@ const Header = () => {
   };
 
   return (
-    <header className="bg-white/95 backdrop-blur-md shadow-lg fixed w-full top-0 z-50 border-b border-gray-100">
-      <div className="container mx-auto px-6 py-4">
+    <header className="bg-white shadow-lg fixed w-full top-0 z-50">
+      <div className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
             <img 
               src="/lovable-uploads/70d36be2-1da9-459a-87fa-149edb5dbe8c.png" 
               alt="SmartWay Idioms" 
-              className="h-14 w-auto"
+              className="h-12 w-auto"
             />
           </div>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-10">
+          <nav className="hidden md:flex items-center space-x-8">
             <button 
               onClick={() => scrollToSection('sobre')}
-              className="text-gray-700 hover:text-red-600 transition-all duration-300 font-medium relative group"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Sobre Nós
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button 
               onClick={() => scrollToSection('metodologia')}
-              className="text-gray-700 hover:text-red-600 transition-all duration-300 font-medium relative group"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Metodologia
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button 
               onClick={() => scrollToSection('servicos')}
-              className="text-gray-700 hover:text-red-600 transition-all duration-300 font-medium relative group"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Serviços
-              <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-red-600 transition-all duration-300 group-hover:w-full"></span>
             </button>
             <button 
               onClick={() => scrollToSection('contato')}
-              className="bg-red-600 text-white px-6 py-2.5 rounded-full hover:bg-red-700 transition-all duration-300 font-medium shadow-lg hover:shadow-xl transform hover:-translate-y-0.5"
+              className="text-gray-700 hover:text-red-600 transition-colors font-medium"
             >
               Fale Conosco
             </button>
@@ -63,23 +60,23 @@ const Header = () => {
               href="https://www.facebook.com/smartwayidioms?locale=pt_BR" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-red-600 transition-all duration-300 p-2 rounded-full hover:bg-red-50"
+              className="text-gray-700 hover:text-red-600 transition-colors"
             >
-              <Facebook size={22} />
+              <Facebook size={24} />
             </a>
             <a 
               href="https://www.instagram.com/smartwayidioms/" 
               target="_blank" 
               rel="noopener noreferrer"
-              className="text-gray-700 hover:text-red-600 transition-all duration-300 p-2 rounded-full hover:bg-red-50"
+              className="text-gray-700 hover:text-red-600 transition-colors"
             >
-              <Instagram size={22} />
+              <Instagram size={24} />
             </a>
           </div>
 
           {/* Mobile Menu Button */}
           <button 
-            className="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors"
+            className="md:hidden"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -88,38 +85,38 @@ const Header = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-6 py-6 border-t border-gray-100 animate-fade-in">
-            <div className="flex flex-col space-y-6">
+          <div className="md:hidden mt-4 py-4 border-t">
+            <div className="flex flex-col space-y-4">
               <button 
                 onClick={() => scrollToSection('sobre')}
-                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left py-2"
+                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left"
               >
                 Sobre Nós
               </button>
               <button 
                 onClick={() => scrollToSection('metodologia')}
-                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left py-2"
+                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left"
               >
                 Metodologia
               </button>
               <button 
                 onClick={() => scrollToSection('servicos')}
-                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left py-2"
+                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left"
               >
                 Serviços
               </button>
               <button 
                 onClick={() => scrollToSection('contato')}
-                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left py-2"
+                className="text-gray-700 hover:text-red-600 transition-colors font-medium text-left"
               >
                 Fale Conosco
               </button>
-              <div className="flex space-x-4 pt-4 border-t border-gray-100">
+              <div className="flex space-x-4 pt-2">
                 <a 
                   href="https://www.facebook.com/smartwayidioms?locale=pt_BR" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-red-600 transition-colors p-2"
+                  className="text-gray-700 hover:text-red-600 transition-colors"
                 >
                   <Facebook size={24} />
                 </a>
@@ -127,7 +124,7 @@ const Header = () => {
                   href="https://www.instagram.com/smartwayidioms/" 
                   target="_blank" 
                   rel="noopener noreferrer"
-                  className="text-gray-700 hover:text-red-600 transition-colors p-2"
+                  className="text-gray-700 hover:text-red-600 transition-colors"
                 >
                   <Instagram size={24} />
                 </a>

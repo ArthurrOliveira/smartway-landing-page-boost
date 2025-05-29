@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin } from 'lucide-react';
 import { useToast } from '@/hooks/use-toast';
 
 const ContactSection = () => {
@@ -32,32 +32,26 @@ const ContactSection = () => {
   };
 
   return (
-    <section id="contato" className="py-24 bg-gradient-to-br from-red-600 to-red-700 relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-gradient-to-r from-red-600/20 to-transparent"></div>
-      <div className="absolute top-0 right-0 w-96 h-96 bg-yellow-300/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/10 rounded-full blur-2xl"></div>
-
-      <div className="container mx-auto px-6 relative z-10">
-        <div className="text-center mb-16 space-y-6">
-          <span className="text-yellow-300 font-semibold text-lg tracking-wide uppercase">Fale Conosco</span>
-          <h2 className="text-4xl lg:text-5xl font-bold text-white leading-tight">
-            Comece sua jornada no inglês hoje
+    <section id="contato" className="py-16 bg-white">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-12">
+          <h2 className="text-4xl font-bold text-gray-800 mb-6">
+            Fale Conosco
           </h2>
-          <p className="text-xl text-red-100 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Entre em contato conosco e descubra como podemos ajudar você a alcançar seus objetivos no inglês
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-16 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto">
           {/* Formulário */}
-          <div className="bg-white/10 backdrop-blur-lg rounded-3xl p-10 border border-white/20">
-            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8">
+          <div className="bg-gray-50 rounded-lg p-8">
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
               Solicite Informações
             </h3>
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
-                <label htmlFor="nome" className="block text-sm font-medium text-white mb-3">
+                <label htmlFor="nome" className="block text-sm font-medium text-gray-700 mb-2">
                   Nome Completo *
                 </label>
                 <input
@@ -67,13 +61,13 @@ const ContactSection = () => {
                   required
                   value={formData.nome}
                   onChange={handleChange}
-                  className="w-full px-6 py-4 border border-white/30 rounded-xl focus:ring-2 focus:ring-yellow-300 focus:border-transparent bg-white/20 backdrop-blur-sm text-white placeholder-white/70 transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="Seu nome completo"
                 />
               </div>
               
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-white mb-3">
+                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
                   E-mail *
                 </label>
                 <input
@@ -83,13 +77,13 @@ const ContactSection = () => {
                   required
                   value={formData.email}
                   onChange={handleChange}
-                  className="w-full px-6 py-4 border border-white/30 rounded-xl focus:ring-2 focus:ring-yellow-300 focus:border-transparent bg-white/20 backdrop-blur-sm text-white placeholder-white/70 transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="seu@email.com"
                 />
               </div>
               
               <div>
-                <label htmlFor="telefone" className="block text-sm font-medium text-white mb-3">
+                <label htmlFor="telefone" className="block text-sm font-medium text-gray-700 mb-2">
                   Telefone *
                 </label>
                 <input
@@ -99,55 +93,54 @@ const ContactSection = () => {
                   required
                   value={formData.telefone}
                   onChange={handleChange}
-                  className="w-full px-6 py-4 border border-white/30 rounded-xl focus:ring-2 focus:ring-yellow-300 focus:border-transparent bg-white/20 backdrop-blur-sm text-white placeholder-white/70 transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-600 focus:border-transparent"
                   placeholder="(11) 99999-9999"
                 />
               </div>
               
               <button
                 type="submit"
-                className="w-full bg-yellow-300 text-red-700 py-4 rounded-xl font-bold text-lg hover:bg-yellow-400 transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 flex items-center justify-center space-x-2"
+                className="w-full bg-red-600 text-white py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors"
               >
-                <Send className="w-5 h-5" />
-                <span>Enviar Mensagem</span>
+                Enviar Mensagem
               </button>
             </form>
           </div>
 
           {/* Informações de contato */}
-          <div className="space-y-10">
-            <h3 className="text-2xl lg:text-3xl font-bold text-white mb-8">
+          <div>
+            <h3 className="text-2xl font-bold text-gray-800 mb-6">
               Informações de Contato
             </h3>
             
-            <div className="space-y-8">
-              <div className="flex items-start space-x-6 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                <div className="text-yellow-300 mt-1 p-3 bg-white/20 rounded-xl">
+            <div className="space-y-6">
+              <div className="flex items-start space-x-4">
+                <div className="text-red-600 mt-1">
                   <Mail className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-lg mb-2">E-mail</h4>
-                  <p className="text-red-100 text-lg">contato@smartwayidioms.com</p>
+                  <h4 className="font-semibold text-gray-800">E-mail</h4>
+                  <p className="text-gray-600">contato@smartwayidioms.com</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-6 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                <div className="text-yellow-300 mt-1 p-3 bg-white/20 rounded-xl">
+              <div className="flex items-start space-x-4">
+                <div className="text-red-600 mt-1">
                   <Phone className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-lg mb-2">Telefone</h4>
-                  <p className="text-red-100 text-lg">(11) 99999-9999</p>
+                  <h4 className="font-semibold text-gray-800">Telefone</h4>
+                  <p className="text-gray-600">(11) 99999-9999</p>
                 </div>
               </div>
               
-              <div className="flex items-start space-x-6 p-6 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20">
-                <div className="text-yellow-300 mt-1 p-3 bg-white/20 rounded-xl">
+              <div className="flex items-start space-x-4">
+                <div className="text-red-600 mt-1">
                   <MapPin className="w-6 h-6" />
                 </div>
                 <div>
-                  <h4 className="font-bold text-white text-lg mb-2">Endereço</h4>
-                  <p className="text-red-100 text-lg leading-relaxed">
+                  <h4 className="font-semibold text-gray-800">Endereço</h4>
+                  <p className="text-gray-600">
                     Rua das Flores, 123<br/>
                     Centro - São Paulo/SP<br/>
                     CEP: 01234-567
@@ -156,10 +149,9 @@ const ContactSection = () => {
               </div>
             </div>
 
-            {/* Modern Image Container */}
-            <div className="mt-10 bg-white/10 backdrop-blur-sm rounded-3xl h-64 flex items-center justify-center relative overflow-hidden border border-white/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent"></div>
-              <p className="text-white/90 text-center z-10 text-lg font-medium">
+            {/* Placeholder para imagem de contato */}
+            <div className="mt-8 bg-gray-200 rounded-lg h-48 flex items-center justify-center">
+              <p className="text-gray-500 text-center">
                 [Espaço para imagem<br/>
                 - Recepção da escola<br/>
                 - Equipe de atendimento<br/>
